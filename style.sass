@@ -1,0 +1,152 @@
+/* sass by Eddie */
+
+@import css3_mixins
+
+$red:      #e74c3c
+$yellow:   #f1c40f
+$orange:   #f39c12
+$green:    #2ecc71
+$blue:     #3498db
+$purple:   #9b59b6
+$midnight: #2c3e50
+$grey:     #b4b9bd
+
+$font: 'Montserrat'
+
+.clear
+  clear: both
+
+body
+  padding: 0
+  margin: 0
+
+$logo-box-size: 110px
+#logo-box
+  font-family: $font, sans-serif
+  $s: $logo-box-size
+  width:       $s
+  height:      $s
+  line-height: $s
+  background-color: black
+  text-align: center
+  font-size: 4em
+  font-weight: 700
+  color: white
+
+#left-column
+  position: fixed
+  width: $logo-box-size
+  height: 100%
+  border-right: 2px solid black
+
+#container
+  margin-left: $logo-box-size + 2
+
+#top-bar
+  height: $logo-box-size
+  line-height: $logo-box-size
+  background-color: black
+  color: white
+  font-family: $font, sans-serif
+  font-size: 2em
+  text-transform: uppercase
+  border-left: 2px solid white
+
+  .menu-item
+    height: 76px
+    float: left
+    margin-left: 100px
+
+  .menu-selected
+    border-bottom: 2px solid white
+
+$portfolio-item: 260px
+$hanging-string-height: 40px
+.portfolio-wrapper
+  // created cause I need stupid overflow:hidden dammit
+  $s: $portfolio-item
+  width:       $s
+  height:      $s
+  line-height: $s
+  position: relative
+  float: left
+  margin-top: $hanging-string-height
+  margin-left: 50px
+
+.portfolio-item
+  $s: $portfolio-item
+  width:       $s
+  height:      $s
+  border-radius: $s/2
+  border: 2px solid black
+  position: relative
+  overflow: hidden
+
+  h2
+    font-family: $font, sans-serif
+    font-size: 1.7em
+    text-align: center
+    text-transform: uppercase
+    position: relative
+    z-index: 2
+    color: white
+    margin: 0
+
+.blackout
+  width:  100%
+  height: 100%
+  background-color: rgba(0,0,0,0.4)
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0
+
+.portfolio-pic
+  position: absolute
+  top: 0
+  left: 0
+  z-index: -1
+
+.hanging-string
+  position: absolute
+  top: - ($hanging-string-height)
+  left: 92px
+
+.container-row
+  width: 945px
+  height: $portfolio-item + $hanging-string-height + 5
+  overflow: hidden
+  margin-bottom: 40px
+
+$circle-skill-size: 38px
+.circle-skill
+  font-family: $font, sans-serif
+  $s: $circle-skill-size
+  width:       $s
+  height:      $s
+  line-height: $s
+  text-align: center
+  border-radius: $s / 2
+  color: white
+  font-size: 0.98em
+  margin: 0 auto
+  margin-top: 20px
+
+.red
+  background-color: $red
+.yellow
+  background-color: $yellow
+.orange
+  background-color: $orange
+.green
+  background-color: $green
+.blue
+  background-color: $blue
+.purple
+  background-color: $purple
+.midnight
+  background-color: $midnight
+.grey
+  background-color: $grey
+
+

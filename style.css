@@ -1,0 +1,138 @@
+/* sass by Eddie */
+/* css3 sass by eddie */
+/* css3-border-radius */
+/* css3-box-shadow */
+/* css3-text-shadow */
+/* css3-transition */
+/* css3-rotation */
+/* text-selection */
+.clear {
+  clear: both; }
+
+body {
+  padding: 0;
+  margin: 0; }
+
+#logo-box {
+  font-family: "Montserrat", sans-serif;
+  width: 110px;
+  height: 110px;
+  line-height: 110px;
+  background-color: black;
+  text-align: center;
+  font-size: 4em;
+  font-weight: 700;
+  color: white; }
+
+#left-column {
+  position: fixed;
+  width: 110px;
+  height: 100%;
+  border-right: 2px solid black; }
+
+#container {
+  margin-left: 112px; }
+
+#top-bar {
+  height: 110px;
+  line-height: 110px;
+  background-color: black;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  border-left: 2px solid white; }
+  #top-bar .menu-item {
+    height: 76px;
+    float: left;
+    margin-left: 100px; }
+  #top-bar .menu-selected {
+    border-bottom: 2px solid white; }
+
+.portfolio-wrapper {
+  width: 260px;
+  height: 260px;
+  line-height: 260px;
+  position: relative;
+  float: left;
+  margin-top: 40px;
+  margin-left: 50px; }
+
+.portfolio-item {
+  width: 260px;
+  height: 260px;
+  border-radius: 130px;
+  border: 2px solid black;
+  position: relative;
+  overflow: hidden; }
+  .portfolio-item h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.7em;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    color: white;
+    margin: 0; }
+
+.blackout {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; }
+
+.portfolio-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+
+.hanging-string {
+  position: absolute;
+  top: -40px;
+  left: 92px; }
+
+.container-row {
+  width: 945px;
+  height: 305px;
+  overflow: hidden;
+  margin-bottom: 40px; }
+
+.circle-skill {
+  font-family: "Montserrat", sans-serif;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 19px;
+  color: white;
+  font-size: 0.98em;
+  margin: 0 auto;
+  margin-top: 20px; }
+
+.red {
+  background-color: #e74c3c; }
+
+.yellow {
+  background-color: #f1c40f; }
+
+.orange {
+  background-color: #f39c12; }
+
+.green {
+  background-color: #2ecc71; }
+
+.blue {
+  background-color: #3498db; }
+
+.purple {
+  background-color: #9b59b6; }
+
+.midnight {
+  background-color: #2c3e50; }
+
+.grey {
+  background-color: #b4b9bd; }
