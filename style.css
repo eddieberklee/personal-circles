@@ -61,7 +61,8 @@ body {
   position: relative;
   float: left;
   margin-top: 40px;
-  margin-left: 50px; }
+  margin-left: 50px;
+  overflow: visible; }
   .portfolio-wrapper a {
     text-decoration: none; }
 
@@ -120,7 +121,6 @@ body {
   width: 980px;
   margin: 0 auto;
   height: 305px;
-  overflow: hidden;
   margin-bottom: 40px; }
 
 .circle-skill {
