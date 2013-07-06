@@ -42,15 +42,19 @@ $logo-box-size: 110px
 #container
   margin-left: $logo-box-size + 2
 
+#top-bar-bg
+  height: $logo-box-size
+  background-color: black
+  border-left: 2px solid white
 #top-bar
+  width: 980px
+  margin: 0 auto
   height: $logo-box-size
   line-height: $logo-box-size
-  background-color: black
   color: white
   font-family: $font, sans-serif
   font-size: 2em
   text-transform: uppercase
-  border-left: 2px solid white
 
   .menu-item
     height: 76px
@@ -73,6 +77,9 @@ $hanging-string-height: 40px
   margin-top: $hanging-string-height
   margin-left: 50px
 
+  a
+    text-decoration: none
+
 .portfolio-item
   $s: $portfolio-item
   width:       $s
@@ -91,21 +98,28 @@ $hanging-string-height: 40px
     z-index: 2
     color: white
     margin: 0
+    @include css3-transition(all,0.2s)
+    opacity: 0
 
-.blackout
-  width:  100%
-  height: 100%
-  background-color: rgba(0,0,0,0.4)
-  position: absolute
-  top: 0
-  left: 0
-  opacity: 0
+  .blackout
+    width:  100%
+    height: 100%
+    background-color: rgba(0,0,0,0.6)
+    position: absolute
+    top: 0
+    left: 0
+    @include css3-transition(all,0.2s)
+    opacity: 0
+    /* hack for chrome not doing its job with overflow:hidden; */
+    border-radius: $portfolio-item / 2 - 5
 
 .portfolio-pic
   position: absolute
   top: 0
   left: 0
   z-index: -1
+  /* hack for chrome not doing its job with overflow:hidden; */
+  border-radius: $portfolio-item / 2 - 5
 
 .hanging-string
   position: absolute
@@ -113,7 +127,8 @@ $hanging-string-height: 40px
   left: 92px
 
 .container-row
-  width: 945px
+  width: 980px
+  margin: 0 auto
   height: $portfolio-item + $hanging-string-height + 5
   overflow: hidden
   margin-bottom: 40px
@@ -131,6 +146,65 @@ $circle-skill-size: 38px
   font-size: 0.98em
   margin: 0 auto
   margin-top: 20px
+
+/* SKILLS SECTION */
+.skills .circle-skill
+  margin: 0
+  position: absolute
+  z-index: -1
+.skills [class^="skills-"]
+  $s: $circle-skill-size
+  width:  $s
+  height: $s
+  position: absolute
+.skills-1
+  top:  25px
+  left: 160px
+.skills-1-dest
+  top:  -18px
+  left: 190px
+.skills .circle-skill:nth-of-type(1)
+  @extend .skills-1
+.skills-2
+  top:  50px
+  left: 190px
+.skills-2-dest
+  top:  12px
+  left: 227px
+.skills .circle-skill:nth-of-type(2)
+  @extend .skills-2
+.skills-3
+  top:  85px
+  left: 210px
+.skills-3-dest
+  top:  56px
+  left: 254px
+.skills .circle-skill:nth-of-type(3)
+  @extend .skills-3
+.skills-4
+  top:  110px
+  left: 210px
+.skills-4-dest
+  top:  110px
+  left: 265px
+.skills .circle-skill:nth-of-type(4)
+  @extend .skills-4
+.skills-5
+  top:  150px
+  left: 210px
+.skills-5-dest
+  top:  160px
+  left: 258px
+.skills .circle-skill:nth-of-type(5)
+  @extend .skills-5
+.skills-6
+  top:  180px
+  left: 190px
+.skills-6-dest
+  top:  206px
+  left: 233px
+.skills .circle-skill:nth-of-type(6)
+  @extend .skills-6
 
 .red
   background-color: $red

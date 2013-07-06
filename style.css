@@ -33,15 +33,20 @@ body {
 #container {
   margin-left: 112px; }
 
+#top-bar-bg {
+  height: 110px;
+  background-color: black;
+  border-left: 2px solid white; }
+
 #top-bar {
+  width: 980px;
+  margin: 0 auto;
   height: 110px;
   line-height: 110px;
-  background-color: black;
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 2em;
-  text-transform: uppercase;
-  border-left: 2px solid white; }
+  text-transform: uppercase; }
   #top-bar .menu-item {
     height: 76px;
     float: left;
@@ -57,6 +62,8 @@ body {
   float: left;
   margin-top: 40px;
   margin-left: 50px; }
+  .portfolio-wrapper a {
+    text-decoration: none; }
 
 .portfolio-item {
   width: 260px;
@@ -73,22 +80,36 @@ body {
     position: relative;
     z-index: 2;
     color: white;
-    margin: 0; }
-
-.blackout {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0; }
+    margin: 0;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    opacity: 0; }
+  .portfolio-item .blackout {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    opacity: 0;
+    /* hack for chrome not doing its job with overflow:hidden; */
+    border-radius: 125px; }
 
 .portfolio-pic {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; }
+  z-index: -1;
+  /* hack for chrome not doing its job with overflow:hidden; */
+  border-radius: 125px; }
 
 .hanging-string {
   position: absolute;
@@ -96,7 +117,8 @@ body {
   left: 92px; }
 
 .container-row {
-  width: 945px;
+  width: 980px;
+  margin: 0 auto;
   height: 305px;
   overflow: hidden;
   margin-bottom: 40px; }
@@ -112,6 +134,65 @@ body {
   font-size: 0.98em;
   margin: 0 auto;
   margin-top: 20px; }
+
+/* SKILLS SECTION */
+.skills .circle-skill {
+  margin: 0;
+  position: absolute;
+  z-index: -1; }
+
+.skills [class^="skills-"] {
+  width: 38px;
+  height: 38px;
+  position: absolute; }
+
+.skills-1, .skills .circle-skill:nth-of-type(1) {
+  top: 25px;
+  left: 160px; }
+
+.skills-1-dest {
+  top: -18px;
+  left: 190px; }
+
+.skills-2, .skills .circle-skill:nth-of-type(2) {
+  top: 50px;
+  left: 190px; }
+
+.skills-2-dest {
+  top: 12px;
+  left: 227px; }
+
+.skills-3, .skills .circle-skill:nth-of-type(3) {
+  top: 85px;
+  left: 210px; }
+
+.skills-3-dest {
+  top: 56px;
+  left: 254px; }
+
+.skills-4, .skills .circle-skill:nth-of-type(4) {
+  top: 110px;
+  left: 210px; }
+
+.skills-4-dest {
+  top: 110px;
+  left: 265px; }
+
+.skills-5, .skills .circle-skill:nth-of-type(5) {
+  top: 150px;
+  left: 210px; }
+
+.skills-5-dest {
+  top: 160px;
+  left: 258px; }
+
+.skills-6, .skills .circle-skill:nth-of-type(6) {
+  top: 180px;
+  left: 190px; }
+
+.skills-6-dest {
+  top: 206px;
+  left: 233px; }
 
 .red {
   background-color: #e74c3c; }
