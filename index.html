@@ -3,19 +3,23 @@
 <html>
   <head>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='bootstrap/css/bootstrap.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="h.css"/>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
   </head>
   <body>
 
     <div id="left-column">
 
-      <div id="logo-box">E</div><!-- /#logo-box -->
+      <a href="index.html"><div id="logo-box">E</div></a>
 
       <div class="h25"></div>
 
       <img id="show-all" src="img/10000/checkmark_medium.png" style="margin-left:19px;"/>
       <img id="hide-all" src="img/10000/cross_medium.png" style="margin-left:11px;"/>
+
+      <div class="h10"></div>
 
       <div class="circle-skill-row">
         <div class="circle-skill red on">
@@ -84,15 +88,17 @@
       <p style="display:none;">PHP</p>
       -->
 
+      <a href="https://github.com/eddieberklee"><img id="github" src="img/github.png"/></a>
+
     </div><!-- /#left-column -->
 
     <div id="container">
       <div id="top-bar-bg">
       <div id="top-bar">
 
-        <div class="menu-item">Resume</div>
-        <div class="menu-item menu-selected">Portfolio</div>
-        <div class="menu-item">Camera Roll</div>
+        <div class="menu-item"><a href="resume.html">Resume</a></div>
+        <div class="menu-item menu-selected"><a href="index.html">Portfolio</a></div>
+        <!-- <div class="menu-item">Camera</div> -->
 
         <div class="clear"></div>
       </div><!-- /#top-bar -->
@@ -471,6 +477,13 @@
 
       <div class="clear"></div>
 
+      <div class="h90"></div>
+
+      <footer>
+        Edward Lee &middot; Let's work together! &middot; eddieberklee@gmail.com
+      </footer>
+
+      <div class="h70"></div>
 
     </div>
 
@@ -568,15 +581,26 @@
           $img.css('display','none');
         }
       });
+      var t = 800;
       function showPortfolio($p) {
-        $p.css('z-index','1');
         $p.css('display','block');
-        $p.css('opacity','1');
+        $(this).css('display', 'block');
+        $p.animate({
+          'z-index': '1',
+          'opacity': '1',
+        },t,function() {
+        });
       }
       function hidePortfolio($p) {
-        $p.css('z-index','-100');
-        $p.css('display','none');
-        $p.css('opacity','0');
+        // $p.css('z-index','-100');
+        // $p.css('display','none');
+        // $p.css('opacity','0');
+        $p.animate({
+          'z-index': '-100',
+          'opacity': '0',
+        },t,function() {
+          $(this).css('display', 'none');
+        });
       }
       function hideAll() {
         skills = ['Ru', 'Py', 'HT', 'CS', 'Ja', 'Ar', 'PH']

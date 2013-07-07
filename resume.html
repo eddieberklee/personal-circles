@@ -1,0 +1,364 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='bootstrap/css/bootstrap.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="h.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="montage.css"/>
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
+  </head>
+  <body>
+
+    <div id="left-column">
+
+      <a href="index.html"><div id="logo-box">E</div></a>
+
+      <div class="h25"></div>
+
+      <style>
+        .download-icon {
+          margin-left: 30px;
+        }
+      </style>
+
+      <a class="download-icon" href="img/resume/resume.docx"><img src="img/resume/word.png"/></a>
+      <br/>
+      <br/>
+      <a class="download-icon" href="img/resume/resume.pdf"><img src="img/resume/pdf.png"/></a>
+
+      <a href="https://github.com/eddieberklee"><img id="github" src="img/github.png"/></a>
+
+    </div><!-- /#left-column -->
+
+    <div id="container" style="text-align:right;">
+      <div id="top-bar-bg">
+      <div id="top-bar">
+
+        <div class="menu-item menu-selected"><a href="resume.html">Resume</a></div>
+        <div class="menu-item"><a href="index.html">Portfolio</a></div>
+        <!-- <div class="menu-item">Camera</div> -->
+
+        <div class="clear"></div>
+      </div><!-- /#top-bar -->
+      </div><!-- /#top-bar-bg -->
+
+
+      <div class="h60"></div>
+
+
+      <div id='montage'>
+        <img class='main' src='img/montage/main_red.png'>
+        <img class='im-a-programmer' src='img/montage/im_a_programmer.png'>
+        <div class='column1'>
+          <div class='img'>
+            <div class='area'></div>
+            <div class='blackout'></div>
+            <img src='img/montage/1.png' style='z-index:3'>
+          </div>
+          <div class='img'>
+            <div class='area'></div>
+            <div class='blackout'></div>
+            <img src='img/montage/2.png' style='z-index:2'>
+          </div>
+          <div class='img'>
+            <div class='area'></div>
+            <div class='blackout'></div>
+            <img src='img/montage/3.png' style='z-index:1'>
+          </div>
+        </div>
+        <div class='column2'>
+          <div class='img'>
+            <div class='area'></div>
+            <div class='blackout'></div>
+            <img src='img/montage/4.png' style='z-index:3'>
+          </div>
+          <div class='img'>
+            <div class='area'></div>
+            <div class='blackout'></div>
+            <img src='img/montage/5.png' style='z-index:2'>
+          </div>
+          <div class='img'>
+            <div class='area'></div>
+            <div class='blackout'></div>
+            <img src='img/montage/6.png' style='z-index:1'>
+          </div>
+        </div>
+        <div class='column3'>
+          <div class='img'>
+            <div class='area'></div>
+            <div class='blackout'></div>
+            <img src='img/montage/7.png' style='z-index:2'>
+          </div>
+          <div class='img'>
+            <div class='area'></div>
+            <div class='blackout'></div>
+            <img src='img/montage/8.png' style='z-index:1'>
+          </div>
+        </div>
+        <div class='column4'>
+          <div class='img'>
+            <div class='area'></div>
+            <div class='blackout'></div>
+            <img src='img/montage/9.png' style='z-index:3'>
+          </div>
+          <div class='img'>
+            <div class='area'></div>
+            <div class='blackout'></div>
+            <img src='img/montage/10.png' style='z-index:2'>
+          </div>
+          <div class='img'>
+            <div class='area'></div>
+            <div class='blackout'></div>
+            <img src='img/montage/11.png' style='z-index:1'>
+          </div>
+        </div>
+        <div class='column5'>
+          <div class='img'>
+            <div class='area'></div>
+            <div class='blackout'></div>
+            <img src='img/montage/12.png' style='z-index:2'>
+          </div>
+          <div class='img'>
+            <div class='area'></div>
+            <div class='blackout'></div>
+            <img src='img/montage/13.png' style='z-index:1'>
+          </div>
+        </div>
+      </div><!-- /#montage -->
+
+      <div class="h40"></div>
+
+      <img src="img/resume/resume.png" style="width:934px;display:block;margin:0 auto;"/>
+
+      <div class="h90"></div>
+
+      <footer>
+        Edward Lee &middot; Let's work together! &middot; eddieberklee@gmail.com
+      </footer>
+
+      <div class="h70"></div>
+
+    </div>
+
+
+
+    <script src="jquery-1.8.2.min.js"></script>
+    <script>
+
+      $(".portfolio-wrapper").hover(function() {
+        // optimize by $(this) -> $this
+        $(this).find(".blackout").css('opacity','1');
+        $(this).find("h2").css('opacity','1');
+
+
+        $base = $(this);
+        var circles = [''];  // necessary for indexing to work in the for loop
+        var i = 1;
+        selected = $base.find('.circle-skill:nth-of-type('+i+')');
+        while (selected.length == 1) {
+          circles.push(selected);
+          i += 1;
+          selected = $base.find('.circle-skill:nth-of-type('+i+')');
+        }
+        for(var i=1; i<=circles.length; i++) {
+          var $skill = $(circles[i]);
+          var $orig = $base.find('.skills-'+i);
+          var $dest = $base.find('.skills-'+i+'-dest');
+          var dest_top = $dest.css('top');
+          var dest_left = $dest.css('left');
+          $skill.animate({
+            top: dest_top,
+            left: dest_left,
+          },100,function() {$(this).css('z-index','100');});
+        }
+      }, function() {
+        $(this).find(".blackout").css('opacity','0');
+        $(this).find("h2").css('opacity','0');
+
+        $base = $(this);
+        var circles = [''];  // necessary for indexing to work in the for loop
+        var i = 1;
+        selected = $base.find('.circle-skill:nth-of-type('+i+')');
+        while (selected.length == 1) {
+          circles.push(selected);
+          i += 1;
+          selected = $base.find('.circle-skill:nth-of-type('+i+')');
+        }
+        for(var i=1; i<=circles.length; i++) {
+          var $skill = $(circles[i]);
+          var $dest = $base.find('.skills-'+i);
+          var $orig = $base.find('.skills-'+i+'-dest');
+          var dest_top = $dest.css('top');
+          var dest_left = $dest.css('left');
+          $skill.css('z-index','-1');
+          $skill.animate({
+            top: dest_top,
+            left: dest_left,
+            'z-index': '-1',
+          },100);
+        }
+      });
+
+      function isOn($selector) {
+        if($selector.attr('class').indexOf('on') != '-1') {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      function showImg($img) {
+        $img.css('display','block');
+        $img.css('position','absolute');
+        $img.css('top','6px');
+        $img.css('left','41px');
+        $img.css('z-index','2');
+      }
+      $('#left-column .circle-skill-row').hover(function() {
+        $circle_skill = $(this).children('.circle-skill');
+        if (isOn($circle_skill)) {
+          // if it's turned on, the option to be to turn it off
+          var checkcross = 'cross';
+          var i=1;
+        } else if (!isOn($circle_skill)) {
+          var checkcross = 'checkmark';
+          var i=0;
+        } else { console.log('yo somethings really effed up'); }
+
+        $img = $circle_skill.find('img')[i];
+        $img = $($img);
+        showImg($img);
+      }, function() {
+        $circle_skill = $(this).children('.circle-skill');
+        $img = $circle_skill.find('img');
+        for(var i=0; i<$img.length; i++) {
+          $img.css('display','none');
+        }
+      });
+      var t = 800;
+      function showPortfolio($p) {
+        $p.css('display','block');
+        $(this).css('display', 'block');
+        $p.animate({
+          'z-index': '1',
+          'opacity': '1',
+        },t,function() {
+        });
+      }
+      function hidePortfolio($p) {
+        // $p.css('z-index','-100');
+        // $p.css('display','none');
+        // $p.css('opacity','0');
+        $p.animate({
+          'z-index': '-100',
+          'opacity': '0',
+        },t,function() {
+          $(this).css('display', 'none');
+        });
+      }
+      function hideAll() {
+        skills = ['Ru', 'Py', 'HT', 'CS', 'Ja', 'Ar', 'PH']
+        for(var i=0; i<skills.length; i++) {
+          hideAllContaining(skills[i]);
+        }
+      }
+      function showAll() {
+        skills = ['Ru', 'Py', 'HT', 'CS', 'Ja', 'Ar', 'PH']
+        for(var i=0; i<skills.length; i++) {
+          showAllContaining(skills[i]);
+        }
+      }
+      $('#show-all').click(function() {
+        showAll();
+        $circles = $('#left-column .circle-skill');
+        for(var c=0; c<$circles.length; c++) {
+          $($circles[c]).removeClass('off');
+          $($circles[c]).addClass('on');
+        }
+      });
+      $('#hide-all').click(function() {
+        hideAll();
+        $circles = $('#left-column .circle-skill');
+        for(var c=0; c<$circles.length; c++) {
+          $($circles[c]).removeClass('on');
+          $($circles[c]).addClass('off');
+        }
+      });
+      function hideAllContaining(skillText) {
+        $portfoliowrappers = $('.portfolio-wrapper');
+        for(var pw=0; pw<$portfoliowrappers.length; pw++) {
+          $p = $($portfoliowrappers[pw]);
+          t = $p.text().trim();
+          if (t.indexOf(skillText) != -1) {
+            hidePortfolio($p);
+          }
+        }
+      }
+      function showAllContaining(skillText) {
+        $portfoliowrappers = $('.portfolio-wrapper');
+        for(var pw=0; pw<$portfoliowrappers.length; pw++) {
+          $p = $($portfoliowrappers[pw]);
+          t = $p.text();
+          if (t.indexOf(skillText) != -1) {
+            showPortfolio($p);
+          }
+        }
+      }
+      $('#left-column .checkmark').click(function() {
+        showAllContaining($(this).parent().text().trim());
+        $parent = $(this).parent();
+        if(isOn($parent)) {
+          $parent.removeClass('on');
+          $parent.addClass('off');
+          var i=0;
+        } else if (!isOn($circle_skill)) {
+          $parent.removeClass('off');
+          $parent.addClass('on');
+          var i=1;
+        } else { console.log('yo something really really effed up'); }
+        $circle_skill = $parent;
+        $img = $circle_skill.find('img');
+        $img.css('display','none');
+        $img = $($img[i]);
+        showImg($img);
+      });
+      $('#left-column .cross').click(function() {
+        hideAllContaining($(this).parent().text().trim());
+        $parent = $(this).parent();
+        if(isOn($parent)) {
+          $parent.removeClass('on');
+          $parent.addClass('off');
+          var i=0;
+        } else if (!isOn($parent)) {
+          $parent.removeClass('off');
+          $parent.addClass('on');
+          var i=1;
+        } else { console.log('yo something really really effed up'); }
+        $circle_skill = $parent;
+        $img = $circle_skill.find('img');
+        $img.css('display','none');
+        $img = $($img[i]);
+        showImg($img);
+      });
+
+      $('.portfolio-wrapper .circle-skill').hover(function() {
+        $(this).css('width','140px');
+        $(this).text($(this).prev().text());
+      },function() {
+        $(this).css('width','38px');
+        $(this).text($(this).prev().prev().text());
+      });
+
+
+      $("div[class^=column] .img").hover(function() {
+        $(this).children(".blackout").css('opacity','0');
+        // $(this).children(".blackout").hide();
+      },function() {
+        $(this).children(".blackout").css('opacity','0.7');
+        // $(this).children(".blackout").show();
+      });
+
+    </script>
+  </body>
+</html>

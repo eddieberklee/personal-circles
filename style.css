@@ -24,6 +24,10 @@ body {
   font-weight: 700;
   color: white; }
 
+footer {
+  font-family: "Montserrat", sans-serif;
+  text-align: center; }
+
 #left-column {
   position: fixed;
   width: 110px;
@@ -40,6 +44,16 @@ body {
 
 .off {
   opacity: 0.3; }
+
+#github {
+  width: 80px;
+  position: fixed;
+  left: 15px;
+  bottom: 10px; }
+
+#top-bar a {
+  color: white;
+  text-decoration: none; }
 
 #container {
   margin-left: 112px; }
