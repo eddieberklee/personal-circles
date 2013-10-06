@@ -95,7 +95,7 @@ footer {
   width: 260px;
   height: 260px;
   border-radius: 130px;
-  border: 2px solid black;
+  border: 5px solid #6cbfdf;
   position: relative;
   overflow: hidden; }
   .portfolio-item h2 {
@@ -139,8 +139,8 @@ footer {
 
 .hanging-string {
   position: absolute;
-  top: -40px;
-  left: 92px;
+  top: -65px;
+  left: 72px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;

@@ -501,6 +501,30 @@
 
     <script src="jquery-1.8.2.min.js"></script>
     <script>
+      /* written by Comp Sci Eddy */
+      window.onload = function start() {
+        opacity_dance();
+      }
+      function opacity_dance() {
+        var opacity = 1.0;
+        var opacity_amount = 0.01;
+        var threshold = 0.8;
+        $('.portfolio-item').css('opacity',opacity);
+        window.setInterval(function() {
+          // numbers don't lie, check the scoreboard
+          if (opacity <= threshold) {
+            opacity_amount = -opacity_amount;
+            opacity += 0.01
+          } else if (opacity < 1) {
+            opacity += opacity_amount;
+          } else {
+            opacity_amount = -opacity_amount;
+            opacity += opacity_amount;
+          }
+          console.log(opacity);
+          $('.portfolio-item').css('opacity',opacity);
+        }, 100);
+      }
 
       $(".portfolio-wrapper").hover(function() {
         // optimize by $(this) -> $this
