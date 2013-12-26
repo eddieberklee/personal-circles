@@ -42,8 +42,8 @@ footer {
 .on {
   opacity: 1; }
 
-.off .cross {
-  opacity: 0.38; }
+.off {
+  opacity: 0.3; }
 
 #github {
   width: 80px;
@@ -79,20 +79,6 @@ footer {
   #top-bar .menu-selected {
     border-bottom: 2px solid white; }
 
-#show-all, .checkmark {
-  position: relative;
-  left: -25px; }
-
-#hide-all, .cross {
-  position: relative;
-  left: -25px; }
-
-#show-all {
-  left: 6px; }
-
-#hide-all {
-  left: 3px; }
-
 .portfolio-wrapper {
   width: 260px;
   height: 260px;
@@ -109,7 +95,7 @@ footer {
   width: 260px;
   height: 260px;
   border-radius: 130px;
-  border: 5px solid #6cbfdf;
+  border: 2px solid black;
   position: relative;
   overflow: hidden; }
   .portfolio-item h2 {
@@ -153,8 +139,8 @@ footer {
 
 .hanging-string {
   position: absolute;
-  top: -65px;
-  left: 72px;
+  top: -40px;
+  left: 92px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;

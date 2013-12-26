@@ -26,8 +26,8 @@
 
       <div class="h25"></div>
 
-      <img id="show-all" src="img/10000/checkmark_medium.png" style=""/>
-      <img id="hide-all" src="img/10000/cross_medium.png" style=""/>
+      <img id="show-all" src="img/10000/checkmark_medium.png" style="margin-left:19px;"/>
+      <img id="hide-all" src="img/10000/cross_medium.png" style="margin-left:11px;"/>
 
       <div class="h10"></div>
 
@@ -501,32 +501,6 @@
 
     <script src="jquery-1.8.2.min.js"></script>
     <script>
-      /* written by Comp Sci Eddy */
-      /*
-      window.onload = function start() {
-        opacity_dance();
-      }
-      function opacity_dance() {
-        var opacity = 0.4;
-        var opacity_amount = 0.01;
-        var threshold = 0.4;
-        $('.portfolio-item').css('opacity',opacity);
-        window.setInterval(function() {
-          // numbers don't lie, check the scoreboard
-          if (opacity <= threshold) {
-            opacity_amount = -opacity_amount;
-            opacity += 0.01
-          } else if (opacity < 0.8) {
-            opacity += opacity_amount;
-          } else {
-            opacity_amount = -opacity_amount;
-            opacity += opacity_amount;
-          }
-          console.log(opacity);
-          $('.portfolio-item').css('opacity',opacity);
-        }, 100);
-      }
-      */
 
       $(".portfolio-wrapper").hover(function() {
         // optimize by $(this) -> $this
@@ -592,8 +566,8 @@
       function showImg($img) {
         $img.css('display','block');
         $img.css('position','absolute');
-        $img.css('top','-14px');
-        $img.css('left','18px');
+        $img.css('top','6px');
+        $img.css('left','41px');
         $img.css('z-index','2');
       }
       $('#left-column .circle-skill-row').hover(function() {
