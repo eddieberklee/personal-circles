@@ -117,7 +117,66 @@
       <!--
       <div class="h10"></div>
       -->
+      <style>
+        .screenshot-blackout {
+          width: 1000%;
+          height: 1000%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 3;
+          display: none;
+          background-color: rgba(0,0,0,0.8);
+        }
+        .screenshot-container {
+          position: fixed;
+          top:  30px;
+          left: 30px;
+        }
+        .screenshot-1, .screenshot-2, .screenshot-3 {
+          position: absolute;
+          background-color: white;
+          box-shadow: 1px 4px 90px rgba(0,0,0,0.8);
+          overflow: hidden;
+          text-align: center;
+        }
+        .screenshot-1 {
+          width:  540px;
+          height: 540px;
+          border-radius: 270px;
+          top: 0;
+          left: 0;
+        }
+        .screenshot-2 {
+          width:  400px;
+          height: 400px;
+          border-radius: 200px;
+          top: 150px;
+          left: 450px;
+        }
+        .screenshot-3 {
+          width:  300px;
+          height: 300px;
+          border-radius: 150px;
+          top: 350px;
+          left: 770px;
+        }
+      </style>
 
+
+      <div class="screenshot-blackout">
+        <div class="screenshot-container">
+          <div class="screenshot-1">
+            <img src="img/screenshots/meet-middle/screenshot-1.png" style="margin-top:40px;">
+          </div>
+          <div class="screenshot-2">
+            <img src="img/screenshots/meet-middle/screenshot-2.png" style="width:61%;margin-top:70px;">
+          </div>
+          <div class="screenshot-3">
+            <img src="img/screenshots/meet-middle/screenshot-3.png" style="margin-top:-130px;">
+          </div>
+        </div>
+      </div>
 
       <div class="portfolio-wrapper">
         <div class="skills">
@@ -145,7 +204,7 @@
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
         <img class="hanging-string" src="img/hanging_string.png"/>
-        <a href="http://mitm.herokuapp.com">
+        <a id="meet-middle" href="http://mitm.herokuapp.com">
           <div class="portfolio-item">
             <h2>meet-middle</h2>
             <div class="blackout"></div>
@@ -154,6 +213,19 @@
         </a>
       </div><!-- /.portfolio-wrapper -->
 
+      <div class="screenshot-blackout">
+        <div class="screenshot-container">
+          <div class="screenshot-1">
+            <img src="img/screenshots/info-stocks/screenshot-1.png" style="max-width:180%;margin-top:40px;">
+          </div>
+          <div class="screenshot-2">
+            <img src="img/screenshots/info-stocks/screenshot-2.png" style="max-width:180%;margin-top:70px;">
+          </div>
+          <div class="screenshot-3">
+            <img src="img/screenshots/info-stocks/screenshot-3.png" style="width:120%;max-width:120%;margin-left:-60px;margin-top:-20px;">
+          </div>
+        </div>
+      </div>
       <div class="portfolio-wrapper">
         <div class="skills">
           <p style="display:none;">Py</p>
@@ -172,7 +244,7 @@
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
         <img class="hanging-string" src="img/hanging_string.png"/>
-        <a href="https://github.com/eddieberklee/info-stocks">
+        <a id="info-stocks" href="https://github.com/eddieberklee/info-stocks">
           <div class="portfolio-item">
             <h2>info-stocks</h2>
             <div class="blackout"></div>
@@ -181,6 +253,19 @@
         </a>
       </div><!-- /.portfolio-wrapper -->
 
+      <div class="screenshot-blackout">
+        <div class="screenshot-container">
+          <div class="screenshot-1">
+            <img src="img/screenshots/aot-notifier/screenshot-1.png" style="max-width:180%;margin-top:40px;">
+          </div>
+          <div class="screenshot-2">
+            <img src="img/screenshots/aot-notifier/screenshot-2.png" style="width:110%;margin-top:-10px;">
+          </div>
+          <div class="screenshot-3">
+            <img src="img/screenshots/aot-notifier/screenshot-3.png" style="margin-top:-142px;width:222%;max-width:1000%;margin-left:-147px;">
+          </div>
+        </div>
+      </div>
       <div class="portfolio-wrapper">
         <div class="skills">
 
@@ -196,7 +281,7 @@
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
         <img class="hanging-string" src="img/hanging_string.png"/>
-        <a href="https://github.com/eddieberklee/rails-attackontitan">
+        <a id="aot-notifier" href="https://github.com/eddieberklee/rails-attackontitan">
           <div class="portfolio-item">
             <h2>aot-notifier</h2>
             <div class="blackout"></div>
@@ -208,6 +293,19 @@
 
 
 
+      <div class="screenshot-blackout">
+        <div class="screenshot-container">
+          <div class="screenshot-1">
+            <img src="img/screenshots/prizm-portfo/screenshot-1.png" style="margin-top:40px;">
+          </div>
+          <div class="screenshot-2">
+            <img src="img/screenshots/prizm-portfo/screenshot-2.png" style="width:61%;margin-top:70px;">
+          </div>
+          <div class="screenshot-3">
+            <img src="img/screenshots/prizm-portfo/screenshot-3.png" style="margin-top:-130px;">
+          </div>
+        </div>
+      </div>
       <div class="portfolio-wrapper">
         <div class="skills">
 
@@ -235,7 +333,7 @@
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
         <img class="hanging-string" src="img/hanging_string.png"/>
-        <a href="http://prizmportfolio.appspot.com">
+        <a id="prizm-portfo" href="http://prizmportfolio.appspot.com">
           <div class="portfolio-item">
             <h2>prizm-portfo</h2>
             <div class="blackout"></div>
@@ -244,6 +342,19 @@
         </a>
       </div><!-- /.portfolio-wrapper -->
       
+      <div class="screenshot-blackout">
+        <div class="screenshot-container">
+          <div class="screenshot-1">
+            <img src="img/screenshots/wooklee/screenshot-1.png" style="margin-top:40px;">
+          </div>
+          <div class="screenshot-2">
+            <img src="img/screenshots/wooklee/screenshot-2.png" style="width:61%;margin-top:70px;">
+          </div>
+          <div class="screenshot-3">
+            <img src="img/screenshots/wooklee/screenshot-3.png" style="margin-top:-130px;">
+          </div>
+        </div>
+      </div>
       <div class="portfolio-wrapper">
         <div class="skills">
 
@@ -267,7 +378,7 @@
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
         <img class="hanging-string" src="img/hanging_string.png"/>
-        <a href="http://www.wooklee.com">
+        <a id="wooklee" href="http://www.wooklee.com">
           <div class="portfolio-item">
             <h2>wooklee</h2>
             <div class="blackout"></div>
@@ -276,6 +387,19 @@
         </a>
       </div><!-- /.portfolio-wrapper -->
 
+      <div class="screenshot-blackout">
+        <div class="screenshot-container">
+          <div class="screenshot-1">
+            <img src="img/screenshots/byteclothing/screenshot-1.png" style="margin-top:40px;">
+          </div>
+          <div class="screenshot-2">
+            <img src="img/screenshots/byteclothing/screenshot-2.png" style="width:61%;margin-top:70px;">
+          </div>
+          <div class="screenshot-3">
+            <img src="img/screenshots/byteclothing/screenshot-3.png" style="margin-top:-130px;">
+          </div>
+        </div>
+      </div>
       <div class="portfolio-wrapper">
         <div class="skills">
 
@@ -303,7 +427,7 @@
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
         <img class="hanging-string" src="img/hanging_string.png"/>
-        <a href="http://www.byteclothing.com">
+        <a id="byteclothing" href="http://www.byteclothing.com">
           <div class="portfolio-item">
             <h2>byteclothing</h2>
             <div class="blackout"></div>
@@ -315,6 +439,19 @@
 
 
 
+      <div class="screenshot-blackout">
+        <div class="screenshot-container">
+          <div class="screenshot-1">
+            <img src="img/screenshots/tele-bears/screenshot-1.png" style="margin-top:40px;">
+          </div>
+          <div class="screenshot-2">
+            <img src="img/screenshots/tele-bears/screenshot-2.png" style="width:61%;margin-top:70px;">
+          </div>
+          <div class="screenshot-3">
+            <img src="img/screenshots/tele-bears/screenshot-3.png" style="margin-top:-130px;">
+          </div>
+        </div>
+      </div>
       <div class="portfolio-wrapper">
         <div class="skills">
 
@@ -330,7 +467,7 @@
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
         <img class="hanging-string" src="img/hanging_string.png"/>
-        <a href="http://www.youtube.com/watch?v=ugli6o-rpHE">
+        <a id="tele-bears" href="http://www.youtube.com/watch?v=ugli6o-rpHE">
           <div class="portfolio-item">
             <h2>"tele-bears"</h2>
             <div class="blackout"></div>
@@ -339,6 +476,19 @@
         </a>
       </div><!-- /.portfolio-wrapper -->
       
+      <div class="screenshot-blackout">
+        <div class="screenshot-container">
+          <div class="screenshot-1">
+            <img src="img/screenshots/auto-doorlock/screenshot-1.png" style="margin-top:40px;">
+          </div>
+          <div class="screenshot-2">
+            <img src="img/screenshots/auto-doorlock/screenshot-2.png" style="width:61%;margin-top:70px;">
+          </div>
+          <div class="screenshot-3">
+            <img src="img/screenshots/auto-doorlock/screenshot-3.png" style="margin-top:-130px;">
+          </div>
+        </div>
+      </div>
       <div class="portfolio-wrapper">
         <div class="skills">
 
@@ -354,7 +504,7 @@
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
         <img class="hanging-string" src="img/hanging_string.png"/>
-        <a href="http://www.youtube.com/watch?v=6Tk0b4_tHYM">
+        <a id="auto-doorlock" href="http://www.youtube.com/watch?v=6Tk0b4_tHYM">
           <div class="portfolio-item">
             <h2>auto-doorlock</h2>
             <div class="blackout"></div>
@@ -363,6 +513,19 @@
         </a>
       </div><!-- /.portfolio-wrapper -->
 
+      <div class="screenshot-blackout">
+        <div class="screenshot-container">
+          <div class="screenshot-1">
+            <img src="img/screenshots/crawling-dog/screenshot-1.png" style="margin-top:40px;">
+          </div>
+          <div class="screenshot-2">
+            <img src="img/screenshots/crawling-dog/screenshot-2.png" style="width:61%;margin-top:70px;">
+          </div>
+          <div class="screenshot-3">
+            <img src="img/screenshots/crawling-dog/screenshot-3.png" style="margin-top:-130px;">
+          </div>
+        </div>
+      </div>
       <div class="portfolio-wrapper">
         <div class="skills">
 
@@ -378,7 +541,7 @@
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
         <img class="hanging-string" src="img/hanging_string.png"/>
-        <a href="http://www.youtube.com/watch?v=MrvD4HbyGdY">
+        <a id="crawling-dog" href="http://www.youtube.com/watch?v=MrvD4HbyGdY">
           <div class="portfolio-item">
             <h2>crawling-dog</h2>
             <div class="blackout"></div>
@@ -390,6 +553,19 @@
 
 
 
+      <div class="screenshot-blackout">
+        <div class="screenshot-container">
+          <div class="screenshot-1">
+            <img src="img/screenshots/landskape/screenshot-1.png" style="margin-top:40px;">
+          </div>
+          <div class="screenshot-2">
+            <img src="img/screenshots/landskape/screenshot-2.png" style="width:61%;margin-top:70px;">
+          </div>
+          <div class="screenshot-3">
+            <img src="img/screenshots/landskape/screenshot-3.png" style="margin-top:-130px;">
+          </div>
+        </div>
+      </div>
       <div class="portfolio-wrapper">
         <div class="skills">
 
@@ -417,7 +593,7 @@
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
         <img class="hanging-string" src="img/hanging_string.png"/>
-        <a href="http://landskape.herokuapp.com">
+        <a id="landskape" href="http://landskape.herokuapp.com">
           <div class="portfolio-item">
             <h2>Landskape</h2>
             <div class="blackout"></div>
@@ -426,6 +602,19 @@
         </a>
       </div><!-- /.portfolio-wrapper -->
       
+      <div class="screenshot-blackout">
+        <div class="screenshot-container">
+          <div class="screenshot-1">
+            <img src="img/screenshots/meet-middle/screenshot-1.png" style="margin-top:40px;">
+          </div>
+          <div class="screenshot-2">
+            <img src="img/screenshots/meet-middle/screenshot-2.png" style="width:61%;margin-top:70px;">
+          </div>
+          <div class="screenshot-3">
+            <img src="img/screenshots/meet-middle/screenshot-3.png" style="margin-top:-130px;">
+          </div>
+        </div>
+      </div>
       <div class="portfolio-wrapper">
         <div class="skills">
 
@@ -452,7 +641,7 @@
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
         <img class="hanging-string" src="img/hanging_string.png"/>
-        <a href="http://www.10ktomastery.com">
+        <a id="10k-to-master" href="http://www.10ktomastery.com">
           <div class="portfolio-item">
             <h2>10k to Mastery</h2>
             <div class="blackout"></div>
@@ -461,6 +650,19 @@
         </a>
       </div><!-- /.portfolio-wrapper -->
 
+      <div class="screenshot-blackout">
+        <div class="screenshot-container">
+          <div class="screenshot-1">
+            <img src="img/screenshots/manga-dl/screenshot-1.png" style="margin-top:40px;">
+          </div>
+          <div class="screenshot-2">
+            <img src="img/screenshots/manga-dl/screenshot-2.png" style="width:61%;margin-top:70px;">
+          </div>
+          <div class="screenshot-3">
+            <img src="img/screenshots/manga-dl/screenshot-3.png" style="margin-top:-130px;">
+          </div>
+        </div>
+      </div>
       <div class="portfolio-wrapper">
         <div class="skills">
 
@@ -476,7 +678,7 @@
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
         <img class="hanging-string" src="img/hanging_string.png"/>
-        <a href="https://github.com/eddieberklee/manga-reader-downloader">
+        <a id="manga-dl" href="https://github.com/eddieberklee/manga-reader-downloader">
           <div class="portfolio-item">
             <h2>manga-dl</h2>
             <div class="blackout"></div>
@@ -501,6 +703,61 @@
 
     <script src="jquery-1.8.2.min.js"></script>
     <script>
+
+      $(function() {
+        $('.screenshot-blackout').click(function() {
+          $(this).hide();
+        });
+
+        $('#meet-middle').click(function(e) {
+          e.preventDefault();
+          $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(0).show();
+        });
+        $('#info-stocks').click(function(e) {
+          e.preventDefault();
+          $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(1).show();
+        });
+        $('#aot-notifier').click(function(e) {
+          e.preventDefault();
+          $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(2).show();
+        });
+        $('#prizm-portfo').click(function(e) {
+          e.preventDefault();
+          $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(3).show();
+        });
+        $('#wooklee').click(function(e) {
+          e.preventDefault();
+          $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(4).show();
+        });
+        $('#byteclothing').click(function(e) {
+          e.preventDefault();
+          $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(5).show();
+        });
+        $('#tele-bears').click(function(e) {
+          e.preventDefault();
+          $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(6).show();
+        });
+        $('#auto-doorlock').click(function(e) {
+          e.preventDefault();
+          $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(7).show();
+        });
+        $('#crawling-dog').click(function(e) {
+          e.preventDefault();
+          $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(8).show();
+        });
+        $('#landskape').click(function(e) {
+          e.preventDefault();
+          $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(9).show();
+        });
+        $('#10k-to-mastery').click(function(e) {
+          e.preventDefault();
+          $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(10).show();
+        });
+        $('#manga-dl').click(function(e) {
+          e.preventDefault();
+          $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(11).show();
+        });
+      });
 
       $(".portfolio-wrapper").hover(function() {
         // optimize by $(this) -> $this
