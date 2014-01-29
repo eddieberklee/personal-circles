@@ -116,6 +116,9 @@ $hanging-string-height: 40px
   position: relative
   overflow: hidden
 
+  &:hover h2
+    top: 60px
+  
   h2
     font-family: $font, sans-serif
     font-size: 1.7em
@@ -127,6 +130,8 @@ $hanging-string-height: 40px
     margin: 0
     @include css3-transition(all,0.2s)
     opacity: 0
+    -webkit-transition: all 0.4s
+    top: 100px
 
   .blackout
     width:  100%

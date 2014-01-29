@@ -3,7 +3,7 @@
 <html>
   <head>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='bootstrap/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='bootstrap/css/bootstrap.css' rel='stylesheet'>
     <link rel="stylesheet" href="h.css"/>
     <link rel="stylesheet" href="style.css"/>
     <link rel="icon" type="image/png" href="img/favicon.png"/>
@@ -126,7 +126,15 @@
           left: 0;
           z-index: 3;
           display: none;
-          background-color: rgba(0,0,0,0.8);
+          background-color: rgba(0,0,0,0.85);
+        }
+        .screenshot-link {
+          width:  300px;
+          height: 300px;
+          border-radius: 150px;
+          position: absolute;
+          top: 400px;
+          left: 50px;
         }
         .screenshot-container {
           position: fixed;
@@ -175,6 +183,9 @@
           <div class="screenshot-3">
             <img src="img/screenshots/meet-middle/screenshot-3.png" style="margin-top:-130px;">
           </div>
+          <a class="screenshot-link" href="http://mitm.herokuapp.com">
+            <span style="font-size:20em" class="glyphicon glyphicon-send"></span>
+          </a>
         </div>
       </div>
 
