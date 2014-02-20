@@ -172,7 +172,9 @@
     populate_hashtags_listing();
 
     function change_size(size, width, top) {
-      $('.hashtag-container').css('width',size);
+      $('.hashtag-container').animate({
+        'width': size,
+      }, 300);
       $('.hashtag-container').find('.hashtag-title').css('width',width);
       $('.hashtag-container').find('iframe').css('width',size);
       $('.hashtag-container').find('iframe').css('top',top);
