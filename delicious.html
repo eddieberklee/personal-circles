@@ -1,0 +1,235 @@
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<style>
+  .hashtag-title {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    z-index: 2;
+    font-family: "Montserrat";
+    font-size: 1.8em;
+    background-color: #0b79e5;
+    color: white;
+    padding-left: 10px;
+  }
+  .hashtag-container:hover .delete-area {
+    opacity: 1;
+  }
+  .hashtag-container {
+    float: left;
+    position: relative;
+    width: 170px;
+    height: 585px;
+    overflow: hidden;
+  }
+  .hashtag-container iframe {
+    width: 170px;
+    height: 900px;
+    position: relative;
+    top: -310px;
+    border: 0;
+  }
+  .make-size {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #aaa;
+    font-family: "Montserrat";
+    font-size: 1.6em;
+    color: white;
+    background-color: #0b79e5;
+    line-height: 40px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    float: left;
+    cursor: pointer;
+  }
+  .make-size:first-of-type {
+    margin-left: 0;
+  }
+  .clear {
+    clear: both;
+  }
+</style>
+
+<div class="make-size" id="make-small">
+  S
+</div>
+<div class="make-size" id="make-medium">
+  M
+</div>
+<div class="make-size" id="make-large">
+  L
+</div>
+<div class="make-size" id="make-new">
+  +
+</div>
+<div class="clear"></div>
+
+<style>
+  .delete-area {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255,255,255,0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: "Montserrat";
+    font-size: 1.6em;
+    color: #fff;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    opacity: 0;
+  }
+  .delete-area .delete-circle {
+    background-color: #e74c3c;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    line-height: 28px;
+    margin: 0 auto;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+</style>
+
+<div class="hashtag-container">
+  <div class="hashtag-title">
+    #daily
+  </div>
+  <iframe src="http://www.delicious.com/eddieberklee/daily"></iframe>
+  <div class="delete-area"><div class="delete-circle">x</div></div>
+</div>
+
+<div class="hashtag-container">
+  <div class="hashtag-title">
+    #read
+  </div>
+  <iframe id="iframe" src="http://www.delicious.com/eddieberklee/read"></iframe>
+  <div class="delete-area"><div class="delete-circle">x</div></div>
+</div>
+
+<div class="hashtag-container">
+  <div class="hashtag-title">
+    #watch
+  </div>
+  <iframe src="http://www.delicious.com/eddieberklee/watch"></iframe>
+  <div class="delete-area"><div class="delete-circle">x</div></div>
+</div>
+
+
+<style>
+  .scroll-area {
+    font-family: "Montserrat";
+    width: 150px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: #27ae60;
+    background-color: #222;
+    text-align: center;
+  }
+  .scroll-area span {
+    position: relative;
+    top: 30px;
+  }
+  #hashtags-listing {
+    width: 100%;
+  }
+  #hashtags-listing .hashtag-listing-each {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-family: "Montserrat";
+    font-size: 1.3em;
+    margin-top: 10px;
+  }
+</style>
+<div class="scroll-area">
+  <div id="hashtags-listing">
+  </div>
+  <span>SCROLL AREA</span>
+</div>
+
+
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script>
+  $(function() {
+
+    function populate_hashtags_listing() {
+      $('#hashtags-listing').html('');
+      $('.hashtag-container').each(function() {
+        hashtag = $(this).find('.hashtag-title').text();
+        $('#hashtags-listing').append('<div class="hashtag-listing-each">'+hashtag+'</div>');
+      });
+    }
+
+    populate_hashtags_listing();
+
+    function change_size(size, width, top) {
+      $('.hashtag-container').css('width',size);
+      $('.hashtag-container').find('.hashtag-title').css('width',width);
+      $('.hashtag-container').find('iframe').css('width',size);
+      $('.hashtag-container').find('iframe').css('top',top);
+    }
+
+    $('#make-small').click(function() {
+      small_size = '170px';
+      small_top = '-310px';
+      small_width = '100%';
+      change_size(small_size, small_width, small_top);
+    });
+    $('#make-medium').click(function() {
+      medium_size = '260px';
+      medium_top = '-245px';
+      medium_width = '100%';
+      change_size(medium_size, medium_width, medium_top);
+    });
+    $('#make-large').click(function() {
+      large_size = '470px';
+      large_top = '-210px';
+      large_width = '100%';
+      change_size(large_size, large_width, large_top);
+    });
+
+    $('#make-new').click(function() {
+      hashtag = prompt("#_____?");
+      html_string = '<div class="hashtag-container"><div class="hashtag-title">#'+hashtag+'</div><iframe id="iframe" src="http://www.delicious.com/eddieberklee/'+hashtag+'"></iframe><div class="delete-area"><div class="delete-circle">x</div></div></div>'
+      last_hashtag_container = $('.hashtag-container').last();
+      last_hashtag_container.after(html_string);
+      allow_deleteable();
+      populate_hashtags_listing();
+    });
+
+    function allow_deleteable() {
+      $('.delete-circle').click(function() {
+        $(this).parents('.hashtag-container').hide();
+      });
+    }
+
+    allow_deleteable();
+
+
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

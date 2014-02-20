@@ -128,13 +128,26 @@
           display: none;
           background-color: rgba(0,0,0,0.85);
         }
-        .screenshot-link {
-          width:  300px;
-          height: 300px;
-          border-radius: 150px;
+        .screenshot-description {
+          width:  800px;
+          height: 800px;
+          border-radius: 400px;
           position: absolute;
-          top: 400px;
-          left: 50px;
+          top: 590px;
+          left: 70px;
+          background-color: white;
+          padding-top: 40px;
+          color: black;
+          outline: 1px solid blue;
+        }
+        .screenshot-text {
+          width: 70%;
+          position: relative;
+          font-size: 1.2em;
+          line-height: 16px;
+          margin-left: 15%;
+          margin-top: 15%;
+          outline: 1px solid red;
         }
         .screenshot-container {
           position: fixed;
@@ -169,6 +182,21 @@
           top: 350px;
           left: 770px;
         }
+        .badge-yelp, .badge-google, .badge-gps {
+          width: 160px;
+          height: 160px;
+          border-radius: 130px;
+          float: left;
+        }
+        .badge-yelp {
+          background-image: url("img/badges/yelp.png");
+        }
+        .badge-google {
+          background-image: url("img/badges/google.png");
+        }
+        .badge-gps {
+          background-image: url("img/badges/gps.png");
+        }
       </style>
 
 
@@ -183,8 +211,16 @@
           <div class="screenshot-3">
             <img src="img/screenshots/meet-middle/screenshot-3.png" style="margin-top:-130px;">
           </div>
-          <a class="screenshot-link" href="http://mitm.herokuapp.com">
-            <span style="font-size:20em" class="glyphicon glyphicon-send"></span>
+          <a class="screenshot-description" href="http://mitm.herokuapp.com">
+            <p style="position:absolute;top:40px;left:250px;">
+              <u style="text-decoration:none;font-size:3em;letter-spacing:-3px;">Meet in the Middle</u>
+            </p>
+            <div style="outline:1px solid yellow;position:absolute;width:80%;top:130px;left:100px;font-size:1.4em;">
+              <div class="badge-yelp"></div>
+              <div class="badge-google"></div>
+              <div class="badge-gps"></div>
+              <div style="clear:both;"></div>
+            </div>
           </a>
         </div>
       </div>
@@ -214,7 +250,6 @@
           <div class="skills-5"></div><div class="skills-5-dest"></div>
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
-        <img class="hanging-string" src="img/hanging_string.png"/>
         <a id="meet-middle" href="http://mitm.herokuapp.com">
           <div class="portfolio-item">
             <h2>meet-middle</h2>
@@ -254,7 +289,6 @@
           <div class="skills-5"></div><div class="skills-5-dest"></div>
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
-        <img class="hanging-string" src="img/hanging_string.png"/>
         <a id="info-stocks" href="https://github.com/eddieberklee/info-stocks">
           <div class="portfolio-item">
             <h2>info-stocks</h2>
@@ -291,7 +325,6 @@
           <div class="skills-5"></div><div class="skills-5-dest"></div>
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
-        <img class="hanging-string" src="img/hanging_string.png"/>
         <a id="aot-notifier" href="https://github.com/eddieberklee/rails-attackontitan">
           <div class="portfolio-item">
             <h2>aot-notifier</h2>
@@ -343,7 +376,6 @@
           <div class="skills-5"></div><div class="skills-5-dest"></div>
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
-        <img class="hanging-string" src="img/hanging_string.png"/>
         <a id="prizm-portfo" href="http://prizmportfolio.appspot.com">
           <div class="portfolio-item">
             <h2>prizm-portfo</h2>
@@ -388,7 +420,6 @@
           <div class="skills-5"></div><div class="skills-5-dest"></div>
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
-        <img class="hanging-string" src="img/hanging_string.png"/>
         <a id="wooklee" href="http://www.wooklee.com">
           <div class="portfolio-item">
             <h2>wooklee</h2>
@@ -437,7 +468,6 @@
           <div class="skills-5"></div><div class="skills-5-dest"></div>
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
-        <img class="hanging-string" src="img/hanging_string.png"/>
         <a id="byteclothing" href="http://www.byteclothing.com">
           <div class="portfolio-item">
             <h2>byteclothing</h2>
@@ -477,7 +507,6 @@
           <div class="skills-5"></div><div class="skills-5-dest"></div>
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
-        <img class="hanging-string" src="img/hanging_string.png"/>
         <a id="tele-bears" href="http://www.youtube.com/watch?v=ugli6o-rpHE">
           <div class="portfolio-item">
             <h2>"tele-bears"</h2>
@@ -514,7 +543,6 @@
           <div class="skills-5"></div><div class="skills-5-dest"></div>
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
-        <img class="hanging-string" src="img/hanging_string.png"/>
         <a id="auto-doorlock" href="http://www.youtube.com/watch?v=6Tk0b4_tHYM">
           <div class="portfolio-item">
             <h2>auto-doorlock</h2>
@@ -551,7 +579,6 @@
           <div class="skills-5"></div><div class="skills-5-dest"></div>
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
-        <img class="hanging-string" src="img/hanging_string.png"/>
         <a id="crawling-dog" href="http://www.youtube.com/watch?v=MrvD4HbyGdY">
           <div class="portfolio-item">
             <h2>crawling-dog</h2>
@@ -603,7 +630,6 @@
           <div class="skills-5"></div><div class="skills-5-dest"></div>
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
-        <img class="hanging-string" src="img/hanging_string.png"/>
         <a id="landskape" href="http://landskape.herokuapp.com">
           <div class="portfolio-item">
             <h2>Landskape</h2>
@@ -651,7 +677,6 @@
           <div class="skills-5"></div><div class="skills-5-dest"></div>
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
-        <img class="hanging-string" src="img/hanging_string.png"/>
         <a id="10k-to-master" href="http://www.10ktomastery.com">
           <div class="portfolio-item">
             <h2>10k to Mastery</h2>
@@ -688,7 +713,6 @@
           <div class="skills-5"></div><div class="skills-5-dest"></div>
           <div class="skills-6"></div><div class="skills-6-dest"></div>
         </div><!-- /.skills -->
-        <img class="hanging-string" src="img/hanging_string.png"/>
         <a id="manga-dl" href="https://github.com/eddieberklee/manga-reader-downloader">
           <div class="portfolio-item">
             <h2>manga-dl</h2>
@@ -718,6 +742,11 @@
       $(function() {
         $('.screenshot-blackout').click(function() {
           $(this).hide();
+        });
+
+        $('.circle-skill').hover(function() {
+          $(this).css('z-index',parseInt($(this).css('z-index'))+1);
+        }, function() {
         });
 
         $('#meet-middle').click(function(e) {
@@ -770,6 +799,8 @@
         });
       });
 
+      animate_duration = 300;
+
       $(".portfolio-wrapper").hover(function() {
         // optimize by $(this) -> $this
         $(this).find(".blackout").css('opacity','1');
@@ -794,7 +825,7 @@
           $skill.animate({
             top: dest_top,
             left: dest_left,
-          },100,function() {$(this).css('z-index','100');});
+          },animate_duration,function() {$(this).css('z-index','100');});
         }
       }, function() {
         $(this).find(".blackout").css('opacity','0');
@@ -820,7 +851,7 @@
             top: dest_top,
             left: dest_left,
             'z-index': '-1',
-          },100);
+          },animate_duration);
         }
       });
 

@@ -95,11 +95,11 @@ footer {
   width: 260px;
   height: 260px;
   border-radius: 130px;
-  border: 2px solid black;
+  border: 5px solid #cccccc;
   position: relative;
   overflow: hidden; }
   .portfolio-item:hover h2 {
-    top: 60px; }
+    top: 85px; }
   .portfolio-item h2 {
     font-family: "Montserrat", sans-serif;
     font-size: 1.7em;
@@ -109,13 +109,12 @@ footer {
     z-index: 2;
     color: white;
     margin: 0;
-    -o-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     opacity: 0;
-    -webkit-transition: all 0.4s;
     top: 100px; }
   .portfolio-item .blackout {
     width: 100%;
@@ -124,11 +123,11 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    -o-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     opacity: 0;
     /* hack for chrome not doing its job with overflow:hidden; */
     border-radius: 125px; }

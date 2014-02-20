@@ -112,12 +112,12 @@ $hanging-string-height: 40px
   width:       $s
   height:      $s
   border-radius: $s/2
-  border: 2px solid black
+  border: 5px solid #ccc
   position: relative
   overflow: hidden
 
   &:hover h2
-    top: 60px
+    top: 85px
   
   h2
     font-family: $font, sans-serif
@@ -128,9 +128,8 @@ $hanging-string-height: 40px
     z-index: 2
     color: white
     margin: 0
-    @include css3-transition(all,0.2s)
+    @include css3-transition(all,0.3s)
     opacity: 0
-    -webkit-transition: all 0.4s
     top: 100px
 
   .blackout
@@ -140,7 +139,7 @@ $hanging-string-height: 40px
     position: absolute
     top: 0
     left: 0
-    @include css3-transition(all,0.2s)
+    @include css3-transition(all,0.3s)
     opacity: 0
     /* hack for chrome not doing its job with overflow:hidden; */
     border-radius: $portfolio-item / 2 - 5
