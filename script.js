@@ -9,51 +9,39 @@ $(function() {
   });
 
   $('#meet-middle').click(function(e) {
-    e.preventDefault();
     // $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(0).show();
   });
   $('#info-stocks').click(function(e) {
-    e.preventDefault();
     // $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(1).show();
   });
   $('#aot-notifier').click(function(e) {
-    e.preventDefault();
     // $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(2).show();
   });
   $('#prizm-portfo').click(function(e) {
-    e.preventDefault();
     // $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(3).show();
   });
   $('#wooklee').click(function(e) {
-    e.preventDefault();
     // $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(4).show();
   });
   $('#byteclothing').click(function(e) {
-    e.preventDefault();
     // $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(5).show();
   });
   $('#tele-bears').click(function(e) {
-    e.preventDefault();
     // $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(6).show();
   });
   $('#auto-doorlock').click(function(e) {
-    e.preventDefault();
     // $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(7).show();
   });
   $('#crawling-dog').click(function(e) {
-    e.preventDefault();
     // $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(8).show();
   });
   $('#landskape').click(function(e) {
-    e.preventDefault();
     // $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(9).show();
   });
   $('#10k-to-mastery').click(function(e) {
-    e.preventDefault();
     // $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(10).show();
   });
   $('#manga-dl').click(function(e) {
-    e.preventDefault();
     // $(this).parents('.portfolio-wrapper').siblings('.screenshot-blackout').eq(11).show();
   });
 });
