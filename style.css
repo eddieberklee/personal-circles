@@ -7,6 +7,10 @@
 /* css3-rotation */
 /* text-selection */
 
+.download-icon {
+  text-align: center;
+}
+
 .center-container {
     margin: 0 auto;
     margin-top: 20px;
@@ -39,6 +43,7 @@ footer {
   position: fixed;
   width: 90px;
   height: 100%;
+  text-align: center;
   border-right: 2px solid black; }
   #left-column .circle-skill {
     position: relative; }
