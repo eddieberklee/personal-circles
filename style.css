@@ -6,6 +6,13 @@
 /* css3-transition */
 /* css3-rotation */
 /* text-selection */
+
+.center-container {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 1000px;
+}
+
 .clear {
   clear: both; }
 
@@ -15,22 +22,22 @@ body {
 
 #logo-box {
   font-family: "Montserrat", sans-serif;
-  width: 110px;
-  height: 110px;
-  line-height: 110px;
-  background-color: black;
+  width: 90px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
-  font-size: 4em;
-  font-weight: 700;
-  color: white; }
-
+  font-size: 2.5em;
+  color: black;
+  font-weight: 700; }
+#logo-box:hover {
+  text-decoration: none; }
 footer {
   font-family: "Montserrat", sans-serif;
   text-align: center; }
 
 #left-column {
   position: fixed;
-  width: 110px;
+  width: 90px;
   height: 100%;
   border-right: 2px solid black; }
   #left-column .circle-skill {
@@ -46,7 +53,7 @@ footer {
   opacity: 0.3; }
 
 #github {
-  width: 80px;
+  width: 58px;
   position: fixed;
   left: 15px;
   bottom: 10px; }
@@ -56,50 +63,58 @@ footer {
   text-decoration: none; }
 
 #container {
-  margin-left: 112px; }
+  width: 900px;
+  margin-left: 90px; }
 
 #top-bar-bg {
-  height: 110px;
-  background-color: black;
+  height: 40px;
+  /*background-color: black;*/
   border-left: 2px solid white; }
 
 #top-bar {
   width: 980px;
   margin: 0 auto;
-  height: 110px;
-  line-height: 110px;
+  height: 40px;
+  line-height: 40px;
   color: white;
   font-family: "Montserrat", sans-serif;
-  font-size: 2em;
+  font-size: 1.2em;
   text-transform: uppercase; }
   #top-bar .menu-item {
-    height: 76px;
+    height: 30px;
     float: left;
-    margin-left: 100px; }
-  #top-bar .menu-selected {
-    border-bottom: 2px solid white; }
+    margin-left: 40px; }
+  .menu-item:hover {
+    border-bottom: 1px solid #000; }
+  #top-bar div a {
+    color: #ccc;
+  }
+  #top-bar .menu-selected a {
+    color: #000;
+    font-weight: bold;
+    /*border-bottom: 1px solid #ccc;*/ }
 
 .portfolio-wrapper {
-  width: 310px;
-  height: 310px;
-  line-height: 260px;
+  width:  200px;
+  height: 200px;
+  line-height: 200px;
   position: relative;
   float: left;
-  margin-top: 95px;
-  margin-left: 50px;
+  margin-top: 35px;
+  margin-left: 70px;
   overflow: visible; }
   .portfolio-wrapper a {
     text-decoration: none; }
 
 .portfolio-item {
-  width: 260px;
-  height: 260px;
+  width:  210px;
+  height: 210px;
   border-radius: 130px;
   border: 5px solid #cccccc;
   position: relative;
   overflow: hidden; }
-  .portfolio-item:hover h2 {
-    top: 95px; }
+  .portfolio-wrapper:hover h2 {
+    top: 85px; }
   .portfolio-item h2 {
     font-family: "Montserrat", sans-serif;
     font-size: 1.7em;
@@ -133,6 +148,8 @@ footer {
     border-radius: 125px; }
 
 .portfolio-pic {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -182,6 +199,7 @@ footer {
 .skills .circle-skill {
   margin: 0;
   position: absolute;
+  cursor: pointer;
   z-index: -1; }
 
 .skills [class^="skills-"] {
@@ -190,36 +208,36 @@ footer {
   position: absolute; }
 
 .skills-1, .skills .circle-skill:nth-of-type(1) {
-  top: 25px;
-  left: 160px; }
+  top: 18px;
+  left: 148px; }
 
 .skills-1-dest {
-  top: -18px;
-  left: 190px; }
+  top: -25px;
+  left: 157px; }
 
 .skills-2, .skills .circle-skill:nth-of-type(2) {
-  top: 50px;
-  left: 190px; }
+  top: 47px;
+  left: 170px; }
 
 .skills-2-dest {
-  top: 12px;
-  left: 227px; }
+  top: 6px;
+  left: 194px; }
 
 .skills-3, .skills .circle-skill:nth-of-type(3) {
   top: 85px;
-  left: 210px; }
+  left: 180px; }
 
 .skills-3-dest {
-  top: 56px;
-  left: 254px; }
+  top: 50px;
+  left: 218px; }
 
 .skills-4, .skills .circle-skill:nth-of-type(4) {
-  top: 110px;
-  left: 210px; }
+  top: 124px;
+  left: 170px; }
 
 .skills-4-dest {
-  top: 110px;
-  left: 265px; }
+  top: 102px;
+  left: 220px; }
 
 .skills-5, .skills .circle-skill:nth-of-type(5) {
   top: 150px;
