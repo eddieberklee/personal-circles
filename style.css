@@ -46,6 +46,7 @@ footer {
   position: fixed;
   width: 90px;
   height: 100%;
+  z-index: 8;
   text-align: center;
   border-right: 2px solid black; }
   #left-column .circle-skill {

@@ -15,6 +15,7 @@ div#montage {
   height: 281px;
   margin: 0 auto;
   position: relative;
+  
   overflow: hidden; }
   div#montage .main {
     position: relative;

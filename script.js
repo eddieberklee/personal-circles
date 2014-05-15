@@ -148,7 +148,7 @@ function showPortfolio($p) {
   $p.css('display','block');
   $(this).css('display', 'block');
   $p.animate({
-    'z-index': '1',
+    'z-index': '100',
     'opacity': '1',
   },t,function() {
   });
