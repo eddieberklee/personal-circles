@@ -13,6 +13,18 @@ $grey:     #b4b9bd
 
 $font: 'Montserrat'
 
+.download-icon
+  border-radius: 25px
+  width: 50px
+  overflow: hidden
+  display: block
+  margin-left: 20px
+
+.center-container
+  width: 1000px
+  margin: 0 auto
+  margin-top: 20px
+
 .clear
   clear: both
 
@@ -20,27 +32,31 @@ body
   padding: 0
   margin: 0
 
-$logo-box-size: 110px
+$logo-box-size: 90px
 #logo-box
   font-family: $font, sans-serif
   $s: $logo-box-size
   width:       $s
-  height:      $s
-  line-height: $s
-  background-color: black
+  height:      40px
+  line-height: 40px
   text-align: center
-  font-size: 4em
+  font-size: 2.5em
   font-weight: 700
-  color: white
+  color: black
+
+  &:hover
+    text-decoration: none
 
 footer
   font-family: $font, sans-serif
   text-align: center
 
 #left-column
+  font-family: $font, sans-serif
   position: fixed
   width: $logo-box-size
   height: 100%
+  text-align: center
   border-right: 2px solid black
 
   .circle-skill
@@ -55,53 +71,68 @@ footer
   opacity: 0.3
 
 #github
-  width: 80px
+  width: 58px
   position: fixed
   left: 15px
   bottom: 10px
+
+#container
+  width: 900px
+  margin-left: 90px
+
+#top-bar-bg
+  height: 40px
+  /* background-color: black */
+  border-left: 2px solid white
 
 #top-bar a
   color: white
   text-decoration: none
 
-#container
-  margin-left: $logo-box-size + 2
+  &:hover
+    position: relative
+    top: -1px
 
-#top-bar-bg
-  height: $logo-box-size
-  background-color: black
-  border-left: 2px solid white
 #top-bar
+  position: fixed
+  top: 0
+  background-color: rgba(255,255,255,0.9)
+  z-index: 99
   width: 980px
   margin: 0 auto
-  height: $logo-box-size
-  line-height: $logo-box-size
+  height: 80px
+  line-height: 80px
   color: white
   font-family: $font, sans-serif
-  font-size: 2em
+  font-size: 1.2em
   text-transform: uppercase
 
+  div a
+    color: #ccc
+
   .menu-item
-    height: 76px
+    height: 30px
     float: left
-    margin-left: 100px
+    margin-left: 40px
 
   .menu-selected
-    border-bottom: 2px solid white
+    a
+      color: #000
+      font-weight: bold
 
-$portfolio-item: 260px
-$hanging-string-height: 40px
+$portfolio-item: 210px
+
 .portfolio-wrapper
   // created cause I need stupid overflow:hidden dammit
   $s: $portfolio-item
-  width:       $s+50
-  height:      $s+50
-  line-height: $s
+  width:       200px
+  height:      200px
+  line-height: 200px
   position: relative
   float: left
   $b: 55px
-  margin-top: $hanging-string-height + $b
-  margin-left: 50px
+  margin-top: 35px
+  margin-left: 70px
   overflow: visible
 
   a
@@ -112,12 +143,12 @@ $hanging-string-height: 40px
   width:       $s
   height:      $s
   border-radius: $s/2
-  border: 5px solid #ccc
+  border: 4px solid #ddd
   position: relative
   overflow: hidden
 
   &:hover h2
-    top: 95px
+    top: 80px
   
   h2
     font-family: $font, sans-serif
@@ -130,7 +161,7 @@ $hanging-string-height: 40px
     margin: 0
     @include css3-transition(all,0.3s)
     opacity: 0
-    top: 100px
+    top: 85px
 
   .blackout
     width:  100%
@@ -145,6 +176,8 @@ $hanging-string-height: 40px
     border-radius: $portfolio-item / 2 - 5
 
 .portfolio-pic
+  width: 100%
+  height: 100%
   position: absolute
   top: 0
   left: 0
@@ -152,16 +185,10 @@ $hanging-string-height: 40px
   /* hack for chrome not doing its job with overflow:hidden; */
   border-radius: $portfolio-item / 2 - 5
 
-.hanging-string
-  position: absolute
-  top: - ($hanging-string-height)
-  left: 92px
-  @include css3-user-select
-
 .container-row
   width: 980px
   margin: 0 auto
-  height: $portfolio-item + $hanging-string-height + 5
+  height: $portfolio-item + 5
   margin-bottom: 40px
 
 #show-all, #hide-all
@@ -181,6 +208,12 @@ $circle-skill-size: 38px
   margin: 0 auto
   margin-top: 20px
   @include css3-user-select
+  cursor: pointer
+  @include css3-transition(width,0.3s)
+
+  &:hover
+    position: relative
+    top: -1px
 
 /* SKILLS SECTION */
 .skills .circle-skill
@@ -193,35 +226,35 @@ $circle-skill-size: 38px
   height: $s
   position: absolute
 .skills-1
-  top:  25px
-  left: 160px
+  top:  18px
+  left: 148px
 .skills-1-dest
-  top:  -18px
-  left: 190px
+  top:  -25px
+  left: 157px
 .skills .circle-skill:nth-of-type(1)
   @extend .skills-1
 .skills-2
-  top:  50px
-  left: 190px
+  top:  47px
+  left: 170px
 .skills-2-dest
-  top:  12px
-  left: 227px
+  top:  6px
+  left: 194px
 .skills .circle-skill:nth-of-type(2)
   @extend .skills-2
 .skills-3
   top:  85px
-  left: 210px
+  left: 180px
 .skills-3-dest
-  top:  56px
-  left: 254px
+  top:  50px
+  left: 218px
 .skills .circle-skill:nth-of-type(3)
   @extend .skills-3
 .skills-4
-  top:  110px
-  left: 210px
+  top:  124px
+  left: 170px
 .skills-4-dest
-  top:  110px
-  left: 265px
+  top:  102px
+  left: 220px
 .skills .circle-skill:nth-of-type(4)
   @extend .skills-4
 .skills-5
@@ -243,19 +276,27 @@ $circle-skill-size: 38px
 
 .red
   background-color: $red
+  border-bottom: 3px solid darken($red, 4%)
 .yellow
   background-color: $yellow
+  border-bottom: 3px solid darken($yellow, 4%)
 .orange
   background-color: $orange
+  border-bottom: 3px solid darken($orange, 4%)
 .green
   background-color: $green
+  border-bottom: 3px solid darken($green, 4%)
 .blue
   background-color: $blue
+  border-bottom: 3px solid darken($blue, 4%)
 .purple
   background-color: $purple
+  border-bottom: 3px solid darken($purple, 4%)
 .midnight
   background-color: $midnight
+  border-bottom: 3px solid darken($midnight, 4%)
 .grey
   background-color: $grey
+  border-bottom: 3px solid darken($grey, 4%)
 
 

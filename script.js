@@ -52,6 +52,9 @@ $(".portfolio-wrapper").hover(function() {
   // optimize by $(this) -> $this
   $(this).find(".blackout").css('opacity','1');
   $(this).find("h2").css('opacity','1');
+  var wrapperWidth = $(this).width();
+  $(this).css('width', wrapperWidth + 60);
+  $(this).css('margin-right', '-60px');
 
 
   $base = $(this);
@@ -77,6 +80,9 @@ $(".portfolio-wrapper").hover(function() {
 }, function() {
   $(this).find(".blackout").css('opacity','0');
   $(this).find("h2").css('opacity','0');
+  var wrapperWidth = $(this).width();
+  $(this).css('width', wrapperWidth - 60);
+  $(this).css('margin-right', '0px');
 
   $base = $(this);
   var circles = [''];  // necessary for indexing to work in the for loop
@@ -209,32 +215,56 @@ function showAllContaining(skillText) {
     }
   }
 }
-$('#left-column .checkmark').click(function() {
-  showAllContaining($(this).parent().text().trim());
-  $parent = $(this).parent();
+
+// $('#left-column .checkmark').click(function() {
+//   showAllContaining($(this).parent().text().trim());
+//   $parent = $(this).parent();
+//   if(isOn($parent)) {
+//     $parent.removeClass('on');
+//     $parent.addClass('off');
+//     var i=0;
+//   } else if (!isOn($circle_skill)) {
+//     $parent.removeClass('off');
+//     $parent.addClass('on');
+//     var i=1;
+//   } else { console.log('yo something really really effed up'); }
+//   $circle_skill = $parent;
+//   $img = $circle_skill.find('img');
+//   $img.css('display','none');
+//   $img = $($img[i]);
+//   showImg($img);
+// });
+
+// $('#left-column .cross').click(function() {
+//   // .substring(0,2) is to select only the two-letter skill title not tooltip title
+//   $parent = $(this).parent();
+//   if(isOn($parent)) {
+//     hideAllContaining($(this).parent().text().trim().substring(0,2));
+//     $parent.removeClass('on');
+//     $parent.addClass('off');
+//     var i=0;
+//   } else if (!isOn($parent)) {
+//     $parent.removeClass('off');
+//     $parent.addClass('on');
+//     var i=1;
+//   } else { console.log('yo something really really effed up'); }
+//   $circle_skill = $parent;
+//   $img = $circle_skill.find('img');
+//   $img.css('display','none');
+//   $img = $($img[i]);
+//   showImg($img);
+// });
+
+$('#left-column .circle-skill').click(function() {
+  // .substring(0,2) is to select only the two-letter skill title not tooltip title
+  $parent = $(this);
   if(isOn($parent)) {
-    $parent.removeClass('on');
-    $parent.addClass('off');
-    var i=0;
-  } else if (!isOn($circle_skill)) {
-    $parent.removeClass('off');
-    $parent.addClass('on');
-    var i=1;
-  } else { console.log('yo something really really effed up'); }
-  $circle_skill = $parent;
-  $img = $circle_skill.find('img');
-  $img.css('display','none');
-  $img = $($img[i]);
-  showImg($img);
-});
-$('#left-column .cross').click(function() {
-  hideAllContaining($(this).parent().text().trim());
-  $parent = $(this).parent();
-  if(isOn($parent)) {
+    hideAllContaining($(this).text().trim().substring(0,2));
     $parent.removeClass('on');
     $parent.addClass('off');
     var i=0;
   } else if (!isOn($parent)) {
+    showAllContaining($(this).text().trim().substring(0,2));
     $parent.removeClass('off');
     $parent.addClass('on');
     var i=1;

@@ -3,7 +3,12 @@
   height: 100%;
   opacity: 0.7;
   background-color: black;
-  position: absolute; }
+  position: absolute;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
 
 div#montage {
   width: 900px;
