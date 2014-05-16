@@ -147,7 +147,7 @@ var t = 800;
 function showPortfolio($p) {
   $p.css('display','block');
   $(this).css('display', 'block');
-  $p.animate({
+  $p.stop().animate({
     'z-index': '100',
     'opacity': '1',
   },t,function() {
@@ -157,7 +157,7 @@ function hidePortfolio($p) {
   // $p.css('z-index','-100');
   // $p.css('display','none');
   // $p.css('opacity','0');
-  $p.animate({
+  $p.stop().animate({
     'z-index': '-100',
     'opacity': '0',
   },t,function() {
