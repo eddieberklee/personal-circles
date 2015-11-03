@@ -32,7 +32,7 @@ div#montage {
   div#montage .im-a-programmer {
     position: absolute;
     top: 60px;
-    left: 345px;
+    left: 320px;
     z-index: 9; }
   div#montage .main, div#montage .column1, div#montage .column2, div#montage .column3, div#montage .column4, div#montage .column5 {
     float: left;
