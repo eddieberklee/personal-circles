@@ -198,8 +198,9 @@ function hideAllContaining(skillText) {
     $p = $($portfoliowrappers[pw]);
     t = $p.text().trim();
     if (t.indexOf(skillText) != -1) {
+      /* must somewhat match the opacity change in style.sass:.off */
       $p.animate({
-        'opacity': '0.3',
+        'opacity': '0.15',
       });
       // hidePortfolio($p);
     }
