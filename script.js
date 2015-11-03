@@ -283,8 +283,11 @@ $('.portfolio-wrapper .circle-skill').hover(function() {
     $this.text($this.prev().text());
   }, 90); // To my future self, I'm sorry you're looking at this - this is to help with the animation as it grows */
 },function() {
-  $(this).css('width','38px');
-  $(this).text($(this).prev().prev().text());
+  $this = $(this);
+  $this.css('width','38px');
+  setTimeout(function() {
+    $this.text($this.prev().prev().text());
+  }, 90);
 });
 
 
