@@ -27,7 +27,7 @@ body {
 
 #logo-box {
   font-family: "Montserrat", sans-serif;
-  width: 90px;
+  width: 105px;
   height: 40px;
   line-height: 40px;
   text-align: center;
@@ -44,7 +44,7 @@ footer {
 #left-column {
   font-family: "Montserrat", sans-serif;
   position: fixed;
-  width: 90px;
+  width: 105px;
   height: 100%;
   z-index: 8;
   text-align: center;
@@ -69,7 +69,7 @@ footer {
 
 #container {
   width: 900px;
-  margin-left: 90px; }
+  margin-left: 105px; }
 
 #top-bar-bg {
   height: 40px;
