@@ -277,10 +277,28 @@ $('#left-column .circle-skill').click(function() {
 });
 
 $('.portfolio-wrapper .circle-skill').hover(function() {
-  $(this).css('width','140px');
-  $(this).text($(this).prev().text());
+  $this = $(this);
+  $this.css('width','140px');
+  setTimeout(function() {
+    $this.text($this.prev().text());
+  }, 90); // To my future self, I'm sorry you're looking at this - this is to help with the animation as it grows */
 },function() {
   $(this).css('width','38px');
   $(this).text($(this).prev().prev().text());
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
